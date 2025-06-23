@@ -15,7 +15,7 @@ const ContactSection = () => {
                 </div>
                 <div className="mb-32">
                     <Link
-                        href="mailto:brittany.chiang@gmail.com"
+                        href="mailto:mariamaqbool35@gmail.com"
                         className="inline-block font-mono text-emerald-400 border border-emerald-400 px-8 py-4 rounded hover:bg-emerald-400/10 transition-colors"
                     >
                         Say Hello
