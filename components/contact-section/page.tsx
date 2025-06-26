@@ -9,7 +9,7 @@ const ContactSection = () => {
                     <p className="font-mono text-emerald-400 text-lg mb-4">04. What&apos;s Next?</p>
                     <h2 className="text-4xl md:text-6xl font-bold text-gray-200 mb-8">Get In Touch</h2>
                     <p className="text-gray-400 text-lg leading-relaxed max-w-lg mx-auto">
-                        Although I&apos;m not currently looking for any new opportunities, my inbox is always open. Whether you
+                        I&apos;m currently looking for new opportunities, my inbox is always open.  I am eager to contribute my skills to a dynamic team and grow as a developer.  Whether you
                         have a question or just want to say hi, I&apos;ll try my best to get back to you!
                     </p>
                 </div>

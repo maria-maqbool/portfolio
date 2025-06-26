@@ -1,21 +1,12 @@
 import Link from "next/link";
 import { Github } from "lucide-react";
+import { ProjectCardProps } from "@/types";
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tech: string[];
-  github?: string | null;
-  external?: string;
-  highlighted?: boolean;
-}
 
-const ProjectCard = ({ title, description, tech, github, external, highlighted }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tech, github, external }: ProjectCardProps) => {
   return (
     <div
-      className={`bg-[#112240] p-6 rounded shadow-lg transition-transform duration-300 group hover:-translate-y-1 ${
-        highlighted ? "border-2 border-dashed border-emerald-400" : ""
-      }`}
+      className={`bg-[#112240] p-6 rounded shadow-lg transition-transform duration-300 group hover:-translate-y-1 `}
     >
       <div className="flex justify-between items-start mb-4">
         <div className="text-emerald-400">
@@ -41,17 +32,14 @@ const ProjectCard = ({ title, description, tech, github, external, highlighted }
           )}
         </div>
       </div>
-
       <h4
-        className={`text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors ${
-          highlighted ? "text-emerald-400" : "text-gray-200"
-        }`}
+        className={`text-xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-gray-200  `}
       >
         {title}
       </h4>
-      <p className="text-gray-400 text-sm mb-4 leading-relaxed">{description}</p>
+      <p className="text-gray-400 text-sm mb-4 leading-relaxed group-hover:text-emerald-100">{description}</p>
 
-      <div className="flex flex-wrap gap-3 text-xs font-mono text-gray-400">
+      <div className="flex flex-wrap gap-3 text-xs font-mono text-gray-400 group-hover:text-emerald-100">
         {tech.map((item, i) => (
           <span key={i}>{item}</span>
         ))}

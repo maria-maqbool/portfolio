@@ -1,28 +1,17 @@
 import Link from "next/link";
 import { Github } from "lucide-react";
+import { Project } from "@/types";
+import Image from "next/image";
 
-type Project = {
-  title: string;
-  description: string | string[];
-  imageUrl: string;
-  imageAlt: string;
-  techStack: string[];
-  links: {
-    github?: string;
-    external?: string;
-    live?: string;
-  };
-  direction?: "left" | "right";
-};
 
-const FeaturedProject = ({ 
-  title, 
-  description, 
-  imageUrl, 
-  imageAlt, 
-  techStack, 
-  links, 
-  direction = "right" 
+const FeaturedProject = ({
+  title,
+  description,
+  imageUrl,
+  imageAlt,
+  techStack,
+  links,
+  direction = "right"
 }: Project) => {
   const isRight = direction === "right";
 
@@ -33,11 +22,7 @@ const FeaturedProject = ({
         <div className={`md:col-span-7 relative group ${isRight ? "order-1" : "order-2 md:order-2"}`}>
           <Link href={links.external || "#"} className="block">
             <div className="relative overflow-hidden rounded bg-emerald-400/20">
-              <img
-                src={imageUrl}
-                alt={imageAlt}
-                className="w-full h-auto filter grayscale contrast-100 mix-blend-multiply transition-all duration-300 group-hover:filter-none group-hover:mix-blend-normal"
-              />
+              <Image src={imageUrl} alt={imageAlt} width={1000} height={1000} className="w-full h-auto filter grayscale contrast-100 mix-blend-multiply transition-all duration-300 group-hover:filter-none group-hover:mix-blend-normal" />
               <div className="absolute inset-0 bg-emerald-400/20 mix-blend-multiply transition-all duration-300 group-hover:bg-transparent"></div>
             </div>
           </Link>
